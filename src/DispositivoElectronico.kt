@@ -1,7 +1,5 @@
-interface DispositivoElectronico {
+interface DispositivoElectronico: EncendidoApagado {
 
-    fun reiniciar(){
-
-    }
+    fun reiniciar(): Boolean
 
 }

@@ -1,10 +1,6 @@
 interface EncendidoApagado {
-    fun encender(): Boolean{
-        return true
-    }
+    fun encender(): Boolean
 
-    fun apagar(): Boolean{
-        return false
-    }
+    fun apagar(): Boolean
 
 }
