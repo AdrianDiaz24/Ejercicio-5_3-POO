@@ -1,4 +1,4 @@
-class Lavadora(marca: String, modelo: String, var encendido: Boolean = false): EncendidoApagado {
+class Lavadora(val marca: String, val modelo: String, var encendido: Boolean = false): EncendidoApagado {
 
     override fun encender(): Boolean {
         if (!encendido){
@@ -12,5 +12,13 @@ class Lavadora(marca: String, modelo: String, var encendido: Boolean = false): E
             encendido = false
         }
         return true
+    }
+
+    override fun toString(): String {
+        return if (encendido){
+            "La lavadra $marca $modelo esta encendida"
+        } else {
+            "La lavadora $marca $modelo esta apagada"
+        }
     }
 }

@@ -1,6 +1,6 @@
 
 
-class Telefono(marca: String, modelo: String, var encendido:Boolean = false):DispositivoElectronico, EncendidoApagado {
+class Telefono(val marca: String, val modelo: String, var encendido:Boolean = false):DispositivoElectronico, EncendidoApagado {
 
     override fun encender(): Boolean {
         if (!encendido){
@@ -23,5 +23,13 @@ class Telefono(marca: String, modelo: String, var encendido:Boolean = false):Dis
             return true
         }
         return false
+    }
+
+    override fun toString(): String {
+        return if (encendido){
+            "El telefono $marca $modelo esta encendido"
+        } else {
+            "El telefono $marca $modelo esta apagado"
+        }
     }
 }
